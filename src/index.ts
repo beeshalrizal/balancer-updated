@@ -12,6 +12,8 @@ import { getRealTimeEstimate } from './helpers';
  *  Set up express app
  */
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 const main = express();
